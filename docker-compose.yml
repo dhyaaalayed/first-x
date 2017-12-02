@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  app:
+    image: node
+    command: npm start
+    working_dir: /app
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgres://postgres@postgres/postgres
+      - PORT=8000
+    links:
+      - postgres
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+  postgres:
+    image: postgres
