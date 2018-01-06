@@ -5,11 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "migrate": "migrate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "megrim": "^2.1.0",
+    "mesa": "^0.7.2",
+    "pg": "^7.4.0",
+    "pgmigrate": "^4.0.0",
+    "underscore": "^1.8.3"
   }
 }
